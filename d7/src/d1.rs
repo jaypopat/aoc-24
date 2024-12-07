@@ -13,7 +13,7 @@ fn get_valid_eq_len(equations: &[(u64, Vec<u64>)]) -> u64 {
         if validate_ops(numbers, *test_value) {
             valid_count += *test_value;
         }
-        println!("--------------");
+        // println!("--------------");
     }
     valid_count
 }
@@ -28,7 +28,7 @@ fn validate_ops(numbers: &[u64], test_value: u64) -> bool {
         .multi_cartesian_product()
         .collect::<Vec<Vec<char>>>();
 
-    println!("{:?}", combinations);
+    // println!("{:?}", combinations);
 
     for combination in combinations {
         let mut result = numbers[0];
@@ -49,11 +49,11 @@ fn validate_ops(numbers: &[u64], test_value: u64) -> bool {
         //println!("result withh this combination: {}", result);
 
         if result > test_value {
-            println!("small optimisation check - result greater than test value so just skipping");
+            // println!("small optimisation check - result greater than test value so just skipping");
             continue;
         }
         if result == test_value {
-            println!("Equation is true: {:?}", numbers);
+            // println!("Equation is true: {:?}", numbers);
             return true;
         }
     }
