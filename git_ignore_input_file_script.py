@@ -26,8 +26,8 @@ def process_cargo_projects():
                     f.write('\ninput.txt\n')
 
     print(f"Processed {len(cargo_projects)} Cargo projects:")
-    print(f"- Removed .git directories where present")
-    print(f"- Added 'input.txt' to .gitignore files")
+    print("- Removed .git directories where present")
+    print("- Added 'input.txt' to .gitignore files")
 
 if __name__ == "__main__":
     process_cargo_projects()
